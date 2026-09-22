@@ -7,7 +7,7 @@ pipeline {
                 docker {
                     image 'snakee/golang-junit:1.21'
                     reuseNode true
-                    args '-e GOCACHE=/tmp/go-build-cache'
+                    args '-e GOCACHE=/tmp/go-build-cache -e GOMODCACHE=/tmp/go-mod-cache'
                 }
             }
             steps {
